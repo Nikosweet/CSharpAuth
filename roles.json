@@ -1,0 +1,19 @@
+{
+  "roles": [
+    {
+      "name": "Administrator",
+      "permissions": ["finance.txt", "hr.txt", "marketing.txt"],
+      "description": "Полный доступ ко всем файлам"
+    },
+    {
+      "name": "User",
+      "permissions": ["hr.txt", "marketing.txt"],
+      "description": "Доступ к кадровым и маркетинговым данным"
+    },
+    {
+      "name": "Guest",
+      "permissions": ["marketing.txt"],
+      "description": "Только маркетинговая информация"
+    }
+  ]
+}

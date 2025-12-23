@@ -1,0 +1,32 @@
+[
+  {
+    "Username": "admin",
+    "PasswordHash": "JAvlGPq9JyTdtvBO6x2llnRI1\u002BgxwIyPqCKAn3THIKk=",
+    "Role": "Administrator"
+  },
+  {
+    "Username": "user1",
+    "PasswordHash": "5gbjiw2MGbJM8O44CBgxYup81j/3kS27IrXoAyhrREY=",
+    "Role": "User"
+  },
+  {
+    "Username": "user2",
+    "PasswordHash": "xnD3sjwb\u002BZfsiQ6dI\u002Bp8AW4SskO9vRUfCLr18LhqfF4=",
+    "Role": "Guest"
+  },
+  {
+    "Username": "manager",
+    "PasswordHash": "hmSFeWz6jXwM9xEWQCBbgwdkM1R1d1EdgfgDCumezqU=",
+    "Role": "User"
+  },
+  {
+    "Username": "guest",
+    "PasswordHash": "a5PMukFKwdCuHnfz\u002BsVgx0imcB7WlGc1pJ1GM1FRjhY=",
+    "Role": "Guest"
+  },
+  {
+    "Username": "Santa_Klaus",
+    "PasswordHash": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+    "Role": "Administrator"
+  }
+]

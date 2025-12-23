@@ -1,0 +1,2 @@
+C:\Users\user\OneDrive\Desktop\VSCodeProjects\AuthC#\bin\Release\net8.0\win-x64\publish\RoleBasedFileAccess.pdb
+C:\Users\user\OneDrive\Desktop\VSCodeProjects\AuthC#\bin\Release\net8.0\win-x64\publish\RoleBasedFileAccess.exe
