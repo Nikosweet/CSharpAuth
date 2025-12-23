@@ -1,19 +1,65 @@
 {
+  "system_name": "Role-Based File Access System",
+  "configuration_date": "2024",
+  "access_control_model": "Ролевая модель доступа (RBAC)",
+  
   "roles": [
     {
       "name": "Administrator",
-      "permissions": ["finance.txt", "hr.txt", "marketing.txt"],
-      "description": "Полный доступ ко всем файлам"
+      "permissions": [
+        "finance.txt",
+        "hr.txt", 
+        "marketing.txt"
+      ],
+      "description": "Полный доступ ко всем файлам системы",
+      "registration_rights": "Может регистрировать новых пользователей всех ролей",
+      "is_admin": true
     },
     {
       "name": "User",
-      "permissions": ["hr.txt", "marketing.txt"],
-      "description": "Доступ к кадровым и маркетинговым данным"
+      "permissions": [
+        "hr.txt",
+        "marketing.txt"
+      ],
+      "description": "Стандартный пользователь с ограниченным доступом",
+      "registration_rights": "Не может регистрировать других пользователей",
+      "is_admin": false
     },
     {
       "name": "Guest",
-      "permissions": ["marketing.txt"],
-      "description": "Только маркетинговая информация"
+      "permissions": [
+        "marketing.txt"
+      ],
+      "description": "Гость с минимальными правами доступа",
+      "registration_rights": "Не может регистрировать других пользователей",
+      "is_admin": false
     }
-  ]
+  ],
+  
+  "business_files": [
+    {
+      "filename": "finance.txt",
+      "description": "Финансовая отчетность и бюджеты",
+      "sensitive_level": "Высокий",
+      "allowed_roles": ["Administrator"]
+    },
+    {
+      "filename": "hr.txt",
+      "description": "Кадровые данные и информация о сотрудниках",
+      "sensitive_level": "Средний",
+      "allowed_roles": ["Administrator", "User"]
+    },
+    {
+      "filename": "marketing.txt",
+      "description": "Маркетинговые планы и стратегии",
+      "sensitive_level": "Низкий",
+      "allowed_roles": ["Administrator", "User", "Guest"]
+    }
+  ],
+  
+  "registration_policy": {
+    "rule": "Только пользователи с ролью Administrator могут регистрировать новых пользователей",
+    "rationale": "Обеспечение контроля доступа и безопасности системы",
+    "implementation": "Проверка роли текущего пользователя перед регистрацией"
+  }
 }

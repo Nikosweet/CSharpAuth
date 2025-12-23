@@ -15,24 +15,54 @@ namespace RoleBasedFileAccess
                 }
                 else
                 {
-                    return $"Файл '{fileName}' не найден!";
+                    return $"Файл '{fileName}' не найден на диске.";
                 }
             }
             catch (Exception ex)
             {
-                return $"Ошибка чтения файла '{fileName}': {ex.Message}";
+                return $"Ошибка при чтении файла: {ex.Message}";
             }
         }
         
-        public static void ShowFileInfo()
+        public static void CreateRoleConfigurationFile()
         {
-            string[] files = { "finance.txt", "hr.txt", "marketing.txt" };
-            
-            Console.WriteLine("\nИНФОРМАЦИЯ О ФАЙЛАХ:");
-            foreach (var file in files)
+            try
             {
-                bool exists = File.Exists(file);
-                Console.WriteLine($"{file}: {(exists ? "существует" : "отсутствует")}");
+                if (!File.Exists("roles.json"))
+                {
+                    string roleConfig = @"{
+  ""role_configuration"": {
+    ""description"": ""Конфигурация ролей и прав доступа системы"",
+    ""roles"": [
+      {
+        ""name"": ""Administrator"",
+        ""permissions"": [""finance.txt"", ""hr.txt"", ""marketing.txt""],
+        ""registration_rights"": ""Может регистрировать любых пользователей"",
+        ""description"": ""Полный доступ ко всем функциям""
+      },
+      {
+        ""name"": ""User"",
+        ""permissions"": [""hr.txt"", ""marketing.txt""],
+        ""registration_rights"": ""Может регистрировать только User/Guest"",
+        ""description"": ""Стандартный пользователь""
+      },
+      {
+        ""name"": ""Guest"",
+        ""permissions"": [""marketing.txt""],
+        ""registration_rights"": ""Не может регистрировать других"",
+        ""description"": ""Гость с минимальными правами""
+      }
+    ]
+  }
+}";
+                    
+                    File.WriteAllText("roles.json", roleConfig);
+                    Console.WriteLine("✓ Создан файл конфигурации ролей: roles.json");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"✗ Ошибка создания файла ролей: {ex.Message}");
             }
         }
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoleBasedFileAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46ee852047e2fcef20a87ca4260c8a6764c3d21c")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoleBasedFileAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoleBasedFileAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

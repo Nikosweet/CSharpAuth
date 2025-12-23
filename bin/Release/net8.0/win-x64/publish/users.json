@@ -1,32 +1,20 @@
-[
-  {
-    "Username": "admin",
-    "PasswordHash": "JAvlGPq9JyTdtvBO6x2llnRI1\u002BgxwIyPqCKAn3THIKk=",
-    "Role": "Administrator"
-  },
-  {
-    "Username": "user1",
-    "PasswordHash": "5gbjiw2MGbJM8O44CBgxYup81j/3kS27IrXoAyhrREY=",
-    "Role": "User"
-  },
-  {
-    "Username": "user2",
-    "PasswordHash": "xnD3sjwb\u002BZfsiQ6dI\u002Bp8AW4SskO9vRUfCLr18LhqfF4=",
-    "Role": "Guest"
-  },
-  {
-    "Username": "manager",
-    "PasswordHash": "hmSFeWz6jXwM9xEWQCBbgwdkM1R1d1EdgfgDCumezqU=",
-    "Role": "User"
-  },
-  {
-    "Username": "guest",
-    "PasswordHash": "a5PMukFKwdCuHnfz\u002BsVgx0imcB7WlGc1pJ1GM1FRjhY=",
-    "Role": "Guest"
-  },
-  {
-    "Username": "Santa_Klaus",
-    "PasswordHash": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
-    "Role": "Administrator"
-  }
-]
+{
+  "system_info": "Role-Based File Access System - Users Database",
+  "generated_at": "2025-12-23 11:20:45",
+  "total_users": 2,
+  "administrators": 1,
+  "regular_users": 1,
+  "guests": 0,
+  "users_list": [
+    {
+      "Username": "admin",
+      "PasswordHash": "JAvlGPq9JyTdtvBO6x2llnRI1+gxwIyPqCKAn3THIKk=",
+      "Role": "Administrator"
+    },
+    {
+      "Username": "user",
+      "PasswordHash": "pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=",
+      "Role": "User"
+    }
+  ]
+}

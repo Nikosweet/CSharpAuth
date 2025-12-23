@@ -1,0 +1,25 @@
+{
+  "role_configuration": {
+    "description": "Конфигурация ролей и прав доступа системы",
+    "roles": [
+      {
+        "name": "Administrator",
+        "permissions": ["finance.txt", "hr.txt", "marketing.txt"],
+        "registration_rights": "Может регистрировать любых пользователей",
+        "description": "Полный доступ ко всем функциям"
+      },
+      {
+        "name": "User",
+        "permissions": ["hr.txt", "marketing.txt"],
+        "registration_rights": "Может регистрировать только User/Guest",
+        "description": "Стандартный пользователь"
+      },
+      {
+        "name": "Guest",
+        "permissions": ["marketing.txt"],
+        "registration_rights": "Не может регистрировать других",
+        "description": "Гость с минимальными правами"
+      }
+    ]
+  }
+}
